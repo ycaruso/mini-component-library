@@ -56,16 +56,13 @@ const Bar = styled.div`
   height: var(--height);
   padding: var(--padding);
   width: 370px;
+  /* Trim off corners when progress bar is near-full. */
+  overflow: hidden;
 `;
 
 const Progress = styled.div`
   background-color: ${COLORS.primary};
-  border-radius: ${(p) =>
-    p.value < 98
-      ? "4px 0px 0px 4px"
-      : p.value > 98 && p.value <= 99.8
-      ? "4px 2px 2px 4px"
-      : "4px"};
+  border-radius: 4px 0px 0px 4px;
   height: 100%;
   width: ${(p) => p.value + '%'};
 `;
