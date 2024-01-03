@@ -23,11 +23,16 @@ const SIZES = {
 };
 
 const ProgressBar = ({ value, size }) => {
+
+  const styles = SIZES[size];
+
+  if (!styles) {
+    throw new Error(`Unknown size passed to ProgressBar: ${size}`);
+  }
+
   if (value < 0 || value > 100) {
     throw new Error("the size must be between 0 and 100");
   }
-
-  const styles = SIZES[size];
 
   return (
     <>
