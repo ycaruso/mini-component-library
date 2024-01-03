@@ -6,19 +6,19 @@ import { COLORS } from "../../constants";
 
 const SIZES = {
   small: {
-    "--height": "8px",
-    "--borderRadius": "4px",
+    "--height": 8 + "px",
+    "--borderRadius": 4 + "px",
     "--padding": "0px",
   },
   medium: {
-    "--height": "12px",
-    "--borderRadius": "4px",
+    "--height": 12 + "px",
+    "--borderRadius": 4 + "px",
     "--padding": "0px",
   },
   large: {
-    "--height": "24px",
-    "--borderRadius": "8px",
-    "--padding": "4px",
+    "--height": 24 + "px",
+    "--borderRadius": 8 + "px",
+    "--padding": 4 + "px",
   },
 };
 
