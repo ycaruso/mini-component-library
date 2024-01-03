@@ -33,7 +33,7 @@ const ProgressBar = ({ value, size }) => {
     <>
       <Wrapper>
         <strong>{value + "%"}</strong>
-        <Bar style={styles}>
+        <Bar aria-valuemin={0} aria-valuenow={value} aria-valuemax={100} style={styles}>
           <Progress value={value}></Progress>
         </Bar>
       </Wrapper>
