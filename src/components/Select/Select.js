@@ -27,18 +27,19 @@ const SelectWrapper = styled.div`
 `;
 
 const SelectStyled = styled.select`
-  padding: 12px 16px;
+  padding: 12px 48px 12px 16px;
   border-radius: 8px;
   border: none;
   appearance: none;
   background-color: ${COLORS.transparentGray15};
+  
 `;
 
 const IconWrapper = styled.div`
   position: absolute;
   top: 0px;
   bottom: 0px;
-  right: 0px;
+  right: 10px;
   margin-top: auto;
   margin-bottom: auto;
   width: fit-content;
