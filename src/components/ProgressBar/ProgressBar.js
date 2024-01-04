@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { COLORS } from "../../constants";
+import VisuallyHidden from "../VisuallyHidden/VisuallyHidden";
 
 const SIZES = {
   small: {
@@ -34,19 +35,18 @@ const ProgressBar = ({ value, size }) => {
   }
 
   return (
-    <>
-      <strong>{value + "%"}</strong>
       <Bar
+        role="progressbar"
         aria-valuemin={0}
         aria-valuenow={value}
         aria-valuemax={100}
         style={styles}
       >
+        <VisuallyHidden>{value + "%"}</VisuallyHidden>
         <ProgressWrapper>
           <Progress value={value} />
         </ProgressWrapper>
       </Bar>
-    </>
   );
 };
 
