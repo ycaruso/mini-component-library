@@ -15,7 +15,7 @@ const Select = ({ label, value, onChange, children }) => {
         {children}
       </SelectStyled>
       <IconWrapper>
-        <Icon id={"chevron-down"} size={24} />
+        <Icon id={"chevron-down"} size={24} strokeWidth={2} />
       </IconWrapper>
     </SelectWrapper>
   );
@@ -24,15 +24,26 @@ const Select = ({ label, value, onChange, children }) => {
 const SelectWrapper = styled.div`
   position: relative;
   width: max-content;
+  color: ${COLORS.gray700};
+
+  &:hover {
+    color: ${COLORS.black};
+  }
+
+  &:focus {
+    outline: 1px dotted #212121;
+    outline: 5px auto -webkit-focus-ring-color;
+  }
 `;
 
 const SelectStyled = styled.select`
-  padding: 12px 48px 12px 16px;
+  padding: 12px 16px;
+  padding-right: 48px;
   border-radius: 8px;
   border: none;
   appearance: none;
+  color: currentColor;
   background-color: ${COLORS.transparentGray15};
-  
 `;
 
 const IconWrapper = styled.div`
