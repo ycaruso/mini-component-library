@@ -70,7 +70,7 @@ const Input = styled.input`
   border: none;
   height: 100%;
   font-weight: 700;
-  color: ${COLORS.gray700};
+  color: inherit;
 
   &::placeholder {
     color: ${COLORS.gray500};
@@ -83,9 +83,6 @@ const Input = styled.input`
     border-radius: 1px;
   }
 
-  &:hover {
-    color: ${COLORS.black};
-  }
 `;
 
 export default IconInput;
