@@ -28,20 +28,21 @@ const styles = {
   }
 };
 
-const IconInput = ({ label, icon, width = 250, size, placeholder }) => {
+const IconInput = ({ label, icon, width = 250, size, placeholder, ...delegate }) => {
 
   return (
     <Wrapper style={styles[size]} width={width}>
       <IconWrapper>
         <Icon id={`${icon}`} size={styles[size].size} strokeWidth={styles[size].strokeWidth} />
       </IconWrapper>
-      <Input style={styles[size]} placeholder={placeholder}></Input>
+      <Input style={styles[size]} placeholder={placeholder} {...delegate}></Input>
       <VisuallyHidden>{label}</VisuallyHidden>
     </Wrapper>
   );
 };
 
-const Wrapper = styled.div`
+const Wrapper = styled.label`
+  display: block;
   position: relative;
   width: fit-content;
   border-bottom: var(--border) solid ${COLORS.black};
@@ -85,8 +86,6 @@ const Input = styled.input`
   &:hover {
     color: ${COLORS.black};
   }
-
-  
 `;
 
 export default IconInput;
